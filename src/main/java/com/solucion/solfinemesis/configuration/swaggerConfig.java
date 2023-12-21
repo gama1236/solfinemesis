@@ -20,17 +20,17 @@ public class swaggerConfig {
         devServer.setDescription("Server URL in Development environment");
 
         Contact contact = new Contact();
-        contact.setEmail("bezkoder@gmail.com");
-        contact.setName("BezKoder");
-        contact.setUrl("https://www.bezkoder.com");
+        contact.setEmail("put your email here");
+        contact.setName("put your name here");
+        contact.setUrl("put your url here");
 
         License mitLicense = new License().name("MIT License").url("https://choosealicense.com/licenses/mit/");
 
         Info info = new Info()
-                .title("Tutorial Management API")
-                .version("1.0")
+                .title("put your title here")
+                .version("put your version here")
                 .contact(contact)
-                .description("This API exposes endpoints to manage tutorials.").termsOfService("https://www.bezkoder.com/terms")
+                .description("put your description").termsOfService("put your url here")
                 .license(mitLicense);
 
         return new OpenAPI().info(info).servers(List.of(devServer));
