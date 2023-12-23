@@ -19,7 +19,11 @@ public class NationalityServiceImpl  implements  NationalityService{
          this.nationalityRepository =  nationalityRepository;
      }
 
-
+    /**
+     * se llama todas la nacionalidades existentes en la base de datos
+     * y las muestra
+     * @return List<NationalityResponse>
+     */
     @Override
     public List<NationalityResponse> getAllNationalities() {
         List<NationalityEntity> nationalityEntity =  this.nationalityRepository.findAll();

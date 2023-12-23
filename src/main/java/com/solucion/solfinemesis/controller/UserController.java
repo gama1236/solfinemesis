@@ -2,7 +2,6 @@ package com.solucion.solfinemesis.controller;
 
 import com.solucion.solfinemesis.request.UserRequest;
 import com.solucion.solfinemesis.service.UserService;
-import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +24,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<String> getAllNacionalities(@RequestBody @Valid UserRequest userRequest) {
+    public ResponseEntity<String> getAllNacionalities(@RequestBody UserRequest userRequest) {
 
         this.userService.createUser(userRequest);
         return new ResponseEntity<>(SUCCESS_MESSAGE, HttpStatus.OK);
